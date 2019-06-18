@@ -1,3 +1,5 @@
+import { PipesModule } from './../shared/pipes/pipes.module';
+import { MatCardModule } from '@angular/material';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CharactersComponent } from './characters.component';
@@ -8,7 +10,11 @@ describe('CharactersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CharactersComponent ]
+      declarations: [ CharactersComponent ],
+      imports: [
+        MatCardModule,
+        PipesModule
+      ]
     })
     .compileComponents();
   }));
