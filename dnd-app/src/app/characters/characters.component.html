@@ -1,0 +1,23 @@
+<div class="characters-cards">
+    <mat-card *ngFor="let char of characters">
+        <mat-card-title>{{char.name}}</mat-card-title>
+        <mat-card-content>
+            <div class="content">
+                <div class="row">
+                    <span>Race: </span>
+                    <span>{{char.race}}</span>
+                </div>
+                <div class="row">
+                    <span>Class: </span>
+                    <span>{{char.class | noData}}</span>
+                </div>
+                <div class="weapons-list">
+                    <div>Weapons used:</div>
+                    <div *ngFor="let weapon of char.weapon" class="weapon">
+                        {{ weapon | weapon }}
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
